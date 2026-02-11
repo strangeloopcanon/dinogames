@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2c1810">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Cretaceous Hold'em</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <!-- Join Screen -->
+    <div id="join-screen" class="screen active">
+      <div class="logo">🦖</div>
+      <h1>Cretaceous Hold'em</h1>
+      <p class="subtitle">Dinosaur Poker</p>
+      
+      <div class="join-form">
+        <input 
+          type="text" 
+          id="player-name" 
+          placeholder="Your name" 
+          maxlength="12"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        
+        <input 
+          type="text" 
+          id="room-code" 
+          placeholder="Room code (or blank to create)" 
+          maxlength="4"
+          autocomplete="off"
+          spellcheck="false"
+          style="text-transform: uppercase;"
+        >
+        
+        <button id="join-btn" class="btn primary">Join Game</button>
+        
+        <p id="connection-status" class="status"></p>
+      </div>
+    </div>
+    
+    <!-- Lobby Screen -->
+    <div id="lobby-screen" class="screen">
+      <div class="lobby-header">
+        <p class="label">Room Code</p>
+        <div id="room-code-display"></div>
+      </div>
+      <p class="subtitle">Waiting for players...</p>
+      
+      <div id="lobby-players" class="player-list"></div>
+      
+      <button id="start-game-btn" class="btn primary" disabled>
+        Start Game
+      </button>
+      
+      <p class="hint">Share the room code with others to join</p>
+    </div>
+    
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <!-- Community Cards -->
+      <div id="community-area">
+        <div class="pot-display">
+          <span class="pot-label">Pot</span>
+          <span id="pot-amount">0</span>
+        </div>
+        <div id="community-cards" class="card-row"></div>
+        <div id="phase-indicator" class="phase-indicator"></div>
+      </div>
+      
+      <!-- Other Players -->
+      <div id="other-players"></div>
+      
+      <!-- Your Cards -->
+      <div id="your-area">
+        <div id="your-cards" class="card-row"></div>
+        <div id="your-info">
+          <span id="your-name"></span>
+          <span class="divider">·</span>
+          <span id="your-chips">0</span>
+        </div>
+      </div>
+      
+      <!-- Action Buttons -->
+      <div id="actions" class="hidden">
+        <button id="btn-fold" class="btn danger">Fold</button>
+        <button id="btn-check" class="btn secondary">Check</button>
+        <button id="btn-call" class="btn primary">Call</button>
+        <button id="btn-raise" class="btn primary">Raise</button>
+        <button id="btn-allin" class="btn accent">All In</button>
+      </div>
+      
+      <!-- Game Status -->
+      <div id="game-status"></div>
+    </div>
+    
+    <!-- Showdown Screen -->
+    <div id="showdown-screen" class="screen">
+      <div class="showdown-header">
+        <div class="trophy">🏆</div>
+        <h2 id="showdown-title">Showdown</h2>
+      </div>
+      <div id="showdown-results"></div>
+      <button id="next-hand-btn" class="btn primary">Next Hand</button>
+    </div>
+  </div>
+  
+  <script type="module" src="client.js"></script>
+</body>
+</html>
