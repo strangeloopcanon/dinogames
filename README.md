@@ -83,7 +83,7 @@ Fixed-limit Texas Hold'em:
 npx partykit deploy
 ```
 
-This gives you a public URL like `https://dinopoker.yourname.partykit.dev`
+This gives you a public URL like `https://dinogames.yourname.partykit.dev`
 
 ## Development
 

@@ -1,7 +1,7 @@
 {
-  "name": "dinopoker",
+  "name": "dinogames",
   "version": "1.0.0",
-  "description": "Cretaceous Hold'em - Dinosaur-themed multiplayer poker",
+  "description": "Dino Games - dinosaur-themed multiplayer party games",
   "type": "module",
   "scripts": {
     "dev": "partykit dev",
