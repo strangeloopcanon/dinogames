@@ -14,6 +14,10 @@ dist/
 *.swp
 *.swo
 .DS_Store
+.codex/
+.cursor/
+.context/
+AGENTS.md
 
 # Logs
 *.log

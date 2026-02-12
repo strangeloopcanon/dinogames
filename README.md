@@ -1,6 +1,8 @@
-# Cretaceous Hold'em
+# Dino Games
 
-A dinosaur-themed multiplayer Texas Hold'em poker game. Each player joins from their own phone/tablet via a room code.
+A dinosaur-themed multiplayer party game collection. Each player joins from their own phone/tablet via a room code.
+
+![Dino Games screenshot](public/dinogames-preview.png)
 
 ## Quick Start
 
